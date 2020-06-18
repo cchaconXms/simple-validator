@@ -22,7 +22,7 @@ namespace XMSBS.SimpleValidator
             this.Obj = obj;
         }
 
-        public SimpleValidator<T> ExecuteBussinesRulesValidation()
+        public SimpleValidator<T> ExecuteBusinessRulesValidation()
         {
             var result = new List<string>();
 
@@ -73,7 +73,7 @@ namespace XMSBS.SimpleValidator
             return this;
         }
 
-        public async Task<SimpleValidator<T>> AddBussinesRulesAsync(IRule<T> rule)
+        public async Task<SimpleValidator<T>> AddBusinessRulesAsync(IRule<T> rule)
         {
             var result = await rule.ExecuteAsync(Obj);
 
@@ -86,7 +86,7 @@ namespace XMSBS.SimpleValidator
             return this;
         }
 
-        public SimpleValidator<T> AddBussinesRules(IRule<T> rule)
+        public SimpleValidator<T> AddBusinessRules(IRule<T> rule)
         {
             var result = rule.Execute(Obj);
 

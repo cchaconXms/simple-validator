@@ -28,7 +28,6 @@ namespace XMSBS.SimpleValidator.Test
                 _nombre = Inyection;
             }
 
-
             public RuleResult Execute(prueba entity)
             {
                 List<string> messages = new List<string>();
@@ -92,11 +91,11 @@ namespace XMSBS.SimpleValidator.Test
                SimpleValidator<prueba> validator = new SimpleValidator<prueba>(prueba);
 
                 validator.IsNotNullOrEmpty(p => p.nombre, "El campo nombre no puede estar vacio")
-                    .Is(p => p.orden, 1, "El campo orden debe ser uno")
+                    .IsNotZero(p => p.orden, "El campo orden debe ser uno")
                     .IsEmail(p => p.email, "El formato del mail no es correcto")
-                    .AddBussinesRules(new MyRule("otra cosa"))
+                    .AddBusinessRules(new MyRule("otra cosa"))
                     .ExecuteDataValidations()
-                    .ExecuteBussinesRulesValidation();
+                    .ExecuteBusinessRulesValidation();
             }
             catch (DataValidationException exD)
             {

@@ -2,13 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <Version>1.0.0.1</Version>
+    <Version>1.0.0.2</Version>
     <Authors>Carlos Chacon</Authors>
     <Company>XMS Business Solutions S.A</Company>
     <Description>Permite validar propiedades de un objeto</Description>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/cchaconXms/xmsbs.simplevalidator</PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+    <FileVersion>1.0.0.2</FileVersion>
+    <PackageReleaseNotes>- Se agrega reglas de negocio</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/cchaconXms/xmsbs.simplevalidator</RepositoryUrl>
   </PropertyGroup>
 
 </Project>

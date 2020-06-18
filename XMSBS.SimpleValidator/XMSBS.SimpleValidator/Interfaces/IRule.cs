@@ -9,7 +9,6 @@ namespace XMSBS.SimpleValidator.Interfaces
     public interface IRule<in T> where T : class
     {
         Task<RuleResult> ExecuteAsync(T entity);
-
         RuleResult Execute(T entity);
     }
 }
