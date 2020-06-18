@@ -6,8 +6,10 @@ using XMSBS.SimpleValidator.Results;
 
 namespace XMSBS.SimpleValidator.Interfaces
 {
-    public interface IRule
+    public interface IRule<in T> where T : class
     {
-        Task<RuleResult> ExecuteAsync();
+        Task<RuleResult> ExecuteAsync(T entity);
+
+        RuleResult Execute(T entity);
     }
 }
