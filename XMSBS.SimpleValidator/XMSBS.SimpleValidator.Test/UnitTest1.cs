@@ -81,7 +81,7 @@ namespace XMSBS.SimpleValidator.Test
         {
             var prueba = new prueba()
             {
-                nombre = "cosa",
+                nombre = "otra cosa",
                 orden = 1,
                 email = "cchacon@xms.cl"
             };
